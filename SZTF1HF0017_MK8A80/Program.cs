@@ -12,6 +12,7 @@ namespace SZTF1HF0017_MK8A80
             long sajatMereseinkOsszege = 0;
             int szamlalo = 0;
 
+            //Értékadás
             for (int i = 0; i < baratunkMeresei.Length; i++) {
                 Console.Write("");
                 baratunkMeresei[i] = long.Parse(Console.ReadLine());
@@ -20,6 +21,7 @@ namespace SZTF1HF0017_MK8A80
                 szamlalo++;
             }
 
+            //Feltételek
             for (int i = 0; i < baratunkMeresei.Length; i++) {
                 //Ha 0
                 if (baratunkMeresei[i] == 0) {
@@ -40,17 +42,17 @@ namespace SZTF1HF0017_MK8A80
                     sajatMeresek[i] = 0;
                     long kulonbseg = baratunkMereseinekOsszege - sajatMereseinkOsszege;
                     sajatMeresek[i] = kulonbseg;
-
                 }
                 sajatMereseinkOsszege = sajatMereseinkOsszege + sajatMeresek[i];
             }
+
             //Kiíratás
             for (int i = 0; i < sajatMeresek.Length-1; i++) {
                 Console.Write(""+sajatMeresek[i] + ",");
             }
             Console.WriteLine(sajatMeresek[szamlalo-1]);
 
-
+            Console.ReadLine();
         }
     }
 }
